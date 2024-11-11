@@ -1,0 +1,29 @@
+body {
+    display: flex;
+}
+
+.sidebar {
+    width: 169px;
+    background-color: #343a40;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+.content {
+    padding: 20px;
+    width: 100%;
+}
+
+.card {
+    margin: 10px;
+}
+
+.sidebar ul>li {
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    background-color: #9e7575;
+}

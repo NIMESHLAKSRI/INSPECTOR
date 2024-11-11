@@ -1,0 +1,30 @@
+.modal-content {
+    padding: 20px;
+}
+
+.btn-primary {
+    margin-top: 20px;
+}
+
+.messageCon {
+    background-color: #d3e3fd;
+
+    color: #5e3838;
+}
+
+.messageTxt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.messageTxt>svg {
+    margin-right: 3px;
+}
+
+
+
+
+
+
+ 
