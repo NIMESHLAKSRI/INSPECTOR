@@ -71,7 +71,7 @@ if (mysqli_num_rows($profile_result) > 0) {
                         <div class="form-group">
                             <label for="property_type">Property Type:</label>
                             <select class="form-control" id="property_type" name="property_type" required>
-                                <option value="">Select Property Type</option>
+                                <option value="" disabled selected>Select Property Type</option>
                                 <option value="Home">Home</option>
                                 <option value="Land">Land</option>
                                 <option value="Condo">Condo</option>
