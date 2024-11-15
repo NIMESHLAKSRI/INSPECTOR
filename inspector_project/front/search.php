@@ -58,70 +58,19 @@
     input {
         margin: 10px 0;
     }
-
-    /*          serch bar        */
-
-    .search-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: white;
-        padding: 10px 20px;
-        border-radius: 5px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    select {
-        padding: 8px;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-
-    button {
-        padding: 8px 15px;
-        font-size: 16px;
-        margin-left: 10px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #0056b3;
-    }
 </style>
 
 <?php
 require "C:/xampp/htdocs/GitHub/INSPECTOR/inspector_project/connection/conn.php";
 
+if (isset($_POST['search'])) {
 
+    $category = $_POST['category'];
+    $select_category = "SELECT * FROM inspector_details WHERE property_type='$category'";
+    $exe_select_category = mysqli_query($conn, $select_category);
+}
 
-$readreg = "SELECT * FROM inspector_details";
-$rdreg = mysqli_query($conn, $readreg);
 ?>
-
-
-
-<!--                    seach bar              -->
-
-
-
-<div class="container">
-    <div class="search-container">
-        <form action="search.php" method="POST">
-            <select name="category">
-                <option value="" disabled selected>Search for your dream property... </option>
-                <option value="Home">Home</option>
-                <option value="Land">Land</option>
-                <option value="Condo">Condo</option>
-            </select>
-            <button type="submit" name="search">Search</button>
-        </form>
-    </div>
-</div>
 
 
 
@@ -129,11 +78,11 @@ $rdreg = mysqli_query($conn, $readreg);
 
 
 
-<?php if (mysqli_num_rows($rdreg) > 0): ?>
+<?php if (mysqli_num_rows($exe_select_category) > 0): ?>
     <div class="container my-5">
         <!-- Use Bootstrap grid system to make cards responsive and wrap -->
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-            <?php while ($row = mysqli_fetch_array($rdreg)): ?>
+            <?php while ($row = mysqli_fetch_array($exe_select_category)): ?>
                 <!-- Profile Card -->
                 <div class="col">
                     <div class="profile-card">
@@ -155,7 +104,6 @@ $rdreg = mysqli_query($conn, $readreg);
                         <div class="bio-section mt-3">
                             <p><strong>Phone No:</strong> <?php echo $row['phone_number']; ?></p>
                         </div>
-
                         <!-- Add data-id attribute for JavaScript to pick up -->
                         <button class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#profileModal" data-id="<?php echo $row['id']; ?>">Add Request</button>
                     </div>
