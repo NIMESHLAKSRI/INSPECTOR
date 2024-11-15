@@ -1,4 +1,17 @@
-<?php require "C:/xampp/htdocs/GitHub/INSPECTOR/inspector_project/back/Include/header.php"; ?>
+<?php
+require "C:/xampp/htdocs/GitHub/INSPECTOR/inspector_project/back/Include/header.php";
+
+session_start();
+
+// Check if the user is logged in
+
+if (!isset($_SESSION['user_id'])) {
+
+    header("Location: http://localhost/GitHub/INSPECTOR/inspector_project/auth/login.php");
+    exit();
+}
+
+?>
 
 <div class="content">
     <h2>Dashboard</h2>
@@ -23,5 +36,4 @@
         </div>
     </div>
 </div>
-
 <?php require "C:/xampp/htdocs/GitHub/INSPECTOR/inspector_project/back/Include/footer.php"; ?>

@@ -21,6 +21,6 @@
             <li class="nav-item"><a class="nav-link text-white" href="<?php echo ADMINURL; ?>">Home</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="<?php echo ADMINURL; ?>/My_Profile/my_profile.php">MY Profile</a></li>
             <li class="nav-item"><a class="nav-link text-white" href="<?php echo ADMINURL; ?>/Requests/request.php">Requests</a></li>
-            <li class="nav-item"><a class="nav-link text-white" href="<?php echo ADMINURL; ?>/logout.php">Logout</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="http://localhost/GitHub/INSPECTOR/inspector_project/auth/login.php">Logout</a></li>
         </ul>
     </div>

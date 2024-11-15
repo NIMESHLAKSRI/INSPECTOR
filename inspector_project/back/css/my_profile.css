@@ -6,25 +6,8 @@
     margin-top: 20px;
 }
 
-.messageCon {
-    background-color: #d3e3fd;
 
-    color: #5e3838;
+
+.alert_profile {
+ margin-left: 10px;
 }
-
-.messageTxt {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.messageTxt>svg {
-    margin-right: 3px;
-}
-
-
-
-
-
-
- 
