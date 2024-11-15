@@ -159,7 +159,7 @@ $row = mysqli_fetch_array($rdreg);
                     <div class="form-group">
                         <label for="property_type">Property Type:</label>
                         <select class="form-control" id="property_type" name="property_type" required>
-                            <option value="">Select Property Type</option>
+                            <option value="" disabled selected>Select Property Type</option>
                             <option value="Home" selected>Home</option>
                             <option value="Land">Land</option>
                             <option value="Condo">Condo</option>
